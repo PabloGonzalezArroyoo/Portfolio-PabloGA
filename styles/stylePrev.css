@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.text {
+    color: yellow;
+    font-size: 3rem; /* Tamaño grande */
+    font-weight: bold;
+    text-align: center;
+}
+
+/* --- MAIN GRID --- */
+.main-grid-container {
+    display: grid;
+    grid-template-areas:
+      'header'
+      'cText'
+      'buttons'
+      'footer';
+    gap: 10px;
+    text-align: center;
+    height: 100vh;  /* Asegurar que el grid cubra toda la altura de la pantalla */
+}
+
+.item1 { grid-area: header; }
+.item2 { grid-area: cText; }
+.item3 { grid-area: buttons; }
+.item4 { grid-area: footer; }
+
+/* Ajustar imagenes del header y footer */
+.item1 img, .item5 img {
+    width: 100%;  /* Hacer que las imágenes ocupen todo el ancho del contenedor */
+    height: 100%;  /* Asegura que las imágenes llenen todo el alto disponible */
+    object-fit: cover;  /* Hace que la imagen cubra el contenedor sin distorsión */
+}
+
+/* --- BUTTONS GRID --- */
+.buttons-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 3 columnas de igual tamaño */
+    grid-template-rows: repeat(2, 1fr);     /* 2 filas de igual tamaño */
+    gap: 10px;
+    text-align: center;
+}
+
+.buttons-grid-container img {
+    width: 30%;
+}
+
+.subText {
+    color: yellow;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
